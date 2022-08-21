@@ -28,7 +28,7 @@ main {
 .image-wrapper {
 	width: 30%;
 	height: 100vh;
-	background-image: url('images/bg-main-desktop.png');
+	background-image: url('/images/bg-main-desktop.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -61,7 +61,7 @@ main {
 }
 
 .card-front {
-	background-image: url('images/bg-card-front.png');
+	background-image: url('/images/bg-card-front.png');
 	top: 20%;
 	left: 55%;
 	z-index: 1;
@@ -108,7 +108,7 @@ main {
 }
 
 .card-back {
-	background-image: url('images/bg-card-back.png');
+	background-image: url('/images/bg-card-back.png');
 	top: 50%;
 	left: 72%;
 
