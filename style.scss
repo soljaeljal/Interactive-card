@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+	font-family: 'Space Grotesk', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	@media screen and (max-width: 376px) {
+		font-size: 14px;
+	}
+}
+
+body {
+	display: flex;
+	overflow-x: hidden;
+}
+
+main {
+	width: 100vw;
+	display: flex;
+	@media only screen and (max-width: 1200px) {
+		//375 mobile
+		flex-direction: column;
+	}
+}
+
+.image-wrapper {
+	width: 30%;
+	height: 100vh;
+	background-image: url('images/bg-main-desktop.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	@media only screen and (max-width: 1200px) {
+		width: 100vw !important;
+		height: 50%;
+		background-size: cover;
+	}
+}
+
+.card {
+	width: 350px;
+	height: 192px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 0.5rem;
+	padding: 1.5rem;
+	color: #fff;
+	letter-spacing: 1.5px;
+	@media only screen and (max-width: 376px) {
+		width: 290px;
+		height: 159px;
+		object-fit: cover;
+	}
+	@media only screen and (max-width: 280px) {
+		width: 272px;
+	}
+}
+
+.card-front {
+	background-image: url('images/bg-card-front.png');
+	top: 20%;
+	left: 55%;
+	z-index: 1;
+	&--logo {
+		width: 4.25rem;
+		@media screen and (max-width: 376px) {
+			width: 4rem;
+		}
+	}
+	&--number {
+		font-size: 22.5px;
+		margin-top: 2.25rem;
+		@media screen and (max-width: 376px) {
+			font-size: 18px;
+			margin-top: 1.8rem;
+		}
+	}
+	&--row {
+		font-size: 13px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 1.5rem;
+		text-transform: uppercase;
+		@media screen and (max-width: 376px) {
+			font-size: 11px !important;
+			margin-top: 1.5rem;
+		}
+	}
+	@media only screen and (max-width: 1200px) {
+		top: 55%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media only screen and (max-width: 376px) {
+		top: 52%;
+		left: 50%;
+	}
+	@media only screen and (max-width: 360px) {
+		top: 49.5%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.card-back {
+	background-image: url('images/bg-card-back.png');
+	top: 50%;
+	left: 72%;
+
+	&--cvc {
+		margin: 63px 0 0 255px;
+		font-size: 13px;
+		@media screen and (max-width: 376px) {
+			margin: 49px 0 0 205px;
+		}
+	}
+	@media only screen and (max-width: 1200px) {
+		top: 6%;
+		left: 40%;
+		transform: translateX(-40%);
+	}
+	@media only screen and (max-width: 360px) {
+		top: 8%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.form-wrapper {
+	width: 70vw;
+	height: 100vh;
+	position: relative;
+	@media screen and (max-width: 1200px) {
+		width: 100%;
+	}
+
+	.complete {
+		display: none;
+		flex-direction: column;
+		max-width: 300px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		align-items: center;
+		gap: 1.25rem;
+
+		&--img {
+			width: 4rem;
+		}
+
+		&--heading {
+			text-transform: uppercase;
+			font-weight: lighter;
+			font-size: 1.5rem;
+			opacity: 0.9;
+			letter-spacing: 1px;
+		}
+
+		&--text {
+			opacity: 0.6;
+			font-weight: lighter;
+		}
+
+		.continueBtn {
+			width: 19rem;
+			margin-top: 1rem;
+		}
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		max-width: 300px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@media screen and (max-width: 1200px) {
+			width: 90%;
+			top: 70%;
+		}
+		@media screen and (max-width: 376px) {
+			width: 90%;
+			top: 57%;
+		}
+
+		input {
+			padding: 0.7rem;
+			margin: 0.5rem 0 0 0;
+			border: 1px solid hsl(270, 3%, 87%);
+			border-radius: 6px;
+			&:focus {
+				border-image: linear-gradient(98deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+				border-width: 2px;
+				border-style: solid;
+				border-image-slice: 1;
+				outline: 2.5px solid #fff;
+				border-radius: 6px;
+			}
+		}
+
+		input::placeholder {
+			color: rgb(179, 179, 179);
+			font-size: 16px;
+		}
+
+		label {
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+
+		.label-wrapper {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.row-wrapper {
+			display: flex;
+			gap: 1rem;
+			.exp-wrapper {
+				#exp-month {
+					width: 48%;
+				}
+
+				#exp-year {
+					width: 48%;
+				}
+			}
+
+			#cvc {
+				width: 100%;
+			}
+		}
+
+		.warning {
+			color: hsl(0, 100%, 66%);
+			font-size: 11px;
+			margin: 0.25rem 0 0.5rem 0;
+		}
+
+		.name--blank,
+		.number--blank,
+		.exp--blank,
+		.cvc--blank {
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+
+		.visible {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.btn {
+		padding: 0.7rem;
+		background-color: hsl(278, 68%, 11%);
+		color: #fff;
+		border-radius: 6px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		&:hover {
+			background: linear-gradient(98deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+			transition: background-color 0.5s ease-in;
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}

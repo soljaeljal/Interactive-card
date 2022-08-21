@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 376px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.image-wrapper {
+  width: 30%;
+  height: 100vh;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-wrapper {
+    width: 100vw !important;
+    height: 50%;
+    background-size: cover;
+  }
+}
+
+.card {
+  width: 350px;
+  height: 192px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width: 376px) {
+  .card {
+    width: 290px;
+    height: 159px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .card {
+    width: 272px;
+  }
+}
+
+.card-front {
+  background-image: url("images/bg-card-front.png");
+  top: 20%;
+  left: 55%;
+  z-index: 1;
+}
+
+.card-front--logo {
+  width: 4.25rem;
+}
+
+@media screen and (max-width: 376px) {
+  .card-front--logo {
+    width: 4rem;
+  }
+}
+
+.card-front--number {
+  font-size: 22.5px;
+  margin-top: 2.25rem;
+}
+
+@media screen and (max-width: 376px) {
+  .card-front--number {
+    font-size: 18px;
+    margin-top: 1.8rem;
+  }
+}
+
+.card-front--row {
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 376px) {
+  .card-front--row {
+    font-size: 11px !important;
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-front {
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .card-front {
+    top: 52%;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .card-front {
+    top: 49.5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.card-back {
+  background-image: url("images/bg-card-back.png");
+  top: 50%;
+  left: 72%;
+}
+
+.card-back--cvc {
+  margin: 63px 0 0 255px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 376px) {
+  .card-back--cvc {
+    margin: 49px 0 0 205px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-back {
+    top: 6%;
+    left: 40%;
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .card-back {
+    top: 8%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.form-wrapper {
+  width: 70vw;
+  height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+.form-wrapper .complete {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.form-wrapper .complete--img {
+  width: 4rem;
+}
+
+.form-wrapper .complete--heading {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.form-wrapper .complete--text {
+  opacity: 0.6;
+  font-weight: lighter;
+}
+
+.form-wrapper .complete .continueBtn {
+  width: 19rem;
+  margin-top: 1rem;
+}
+
+.form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1200px) {
+  .form-wrapper form {
+    width: 90%;
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .form-wrapper form {
+    width: 90%;
+    top: 57%;
+  }
+}
+
+.form-wrapper form input {
+  padding: 0.7rem;
+  margin: 0.5rem 0 0 0;
+  border: 1px solid #dedddf;
+  border-radius: 6px;
+}
+
+.form-wrapper form input:focus {
+  -o-border-image: linear-gradient(98deg, #6448fe, #600594);
+     border-image: linear-gradient(98deg, #6448fe, #600594);
+  border-width: 2px;
+  border-style: solid;
+  border-image-slice: 1;
+  outline: 2.5px solid #fff;
+  border-radius: 6px;
+}
+
+.form-wrapper form input::-webkit-input-placeholder {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.form-wrapper form input:-ms-input-placeholder {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.form-wrapper form input::-ms-input-placeholder {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.form-wrapper form input::placeholder {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.form-wrapper form label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.form-wrapper form .label-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.form-wrapper form .row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.form-wrapper form .row-wrapper .exp-wrapper #exp-month {
+  width: 48%;
+}
+
+.form-wrapper form .row-wrapper .exp-wrapper #exp-year {
+  width: 48%;
+}
+
+.form-wrapper form .row-wrapper #cvc {
+  width: 100%;
+}
+
+.form-wrapper form .warning {
+  color: #ff5252;
+  font-size: 11px;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.form-wrapper form .name--blank,
+.form-wrapper form .number--blank,
+.form-wrapper form .exp--blank,
+.form-wrapper form .cvc--blank {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.form-wrapper form .visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-wrapper .btn {
+  padding: 0.7rem;
+  background-color: #21092f;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-wrapper .btn:hover {
+  background: linear-gradient(98deg, #6448fe, #600594);
+  -webkit-transition: background-color 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
